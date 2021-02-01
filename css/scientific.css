@@ -1,0 +1,87 @@
+body {
+    /* background-image: linear-gradient(blue,yellow,red); */
+    background-color: rgba(245, 245, 245, 0.562);
+}
+.scientific {
+    margin: auto;
+    /* border: 1px solid black; */
+    width: 350px;
+    background: rgba(128, 128, 128, 0.082);
+    box-shadow: 0px 0px 5px blueviolet;
+    border-radius: 5px;
+}
+.icon-svg {
+    margin-top: 0px;
+    display: flex;
+}
+.typed {
+    height: 20px;
+    /* border: 1px solid red; */
+    text-align: right;
+    padding-top: 5px;
+    margin-bottom: 0px;
+}
+.result {
+    /* border: 1px solid black; */
+    height: 30px;
+    text-align: right;
+    margin-top: 0px;
+    box-sizing: border-box;
+    padding: 15px 0px;
+}
+
+.three-buttons {
+    margin-bottom: 2%;
+}
+
+.three-buttons button {
+    background: none;
+    border: 0px;
+    outline: 0px;
+}
+
+.memory {
+    margin-right: 0px;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+.memory button {
+    margin-right: 1px;
+    width: 50px;
+    height: 30px;
+    background: none;
+    border: 0px;
+    outline: 0;
+}
+
+.calc div {
+    width: 100%;
+    margin-left: 1.5%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+.calc div button {
+    border: 0px;
+    outline: 0px;
+    width: 65px;
+    height: 40px;
+}
+
+.like-white {
+    background:  rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    /* background-color: black; */
+}
+
+.calc div button:hover {
+    background: rgba(128, 128, 128, 0.322);
+}
+
+.calc div .operations:hover {
+    background-color: blue;
+}
+
+.calc div .operations:active {
+    background-color: cyan;
+}

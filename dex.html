@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/scientific.css">
+    <!-- <script src="js/scientific.js"></script> -->
+</head>
+<body>
+    <main class="scientific">
+        <p>Calculator</p>
+        <div class="icon-svg">
+            <button style="border: 0; outline: 0; background-color: rgba(128, 128, 128, 0.014);" onclick="">
+                <svg style="height: 25px" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon"></path></g></svg>
+            </button>
+            <p>Scientific</p>
+        </div>
+
+        <section class="typed" id="tye"></section>
+
+        <section>
+            <h1 class="result"></h1>
+        </section>
+        <div class="three-buttons">
+            <button><b>DEG</b></button> 
+            <button><b>HYP</b></button> 
+            <button><b>F-E</b></button>
+        </div>
+
+        <div class="memory">
+            <button><b>MC</b></button>
+            <button><b>MR</b></button>
+            <button><b>M+</b></button>
+            <button><b>M-</b></button>
+            <button><b>MS</b></button>
+            <button><b>M</b></button>
+        </div>
+
+        <section class="calc">
+            <div>
+                <button onclick="square()">x<sup id="square" style="display: inline;">2</sup><sup class="cube" style="display: none;">3</sup></button>
+                <button onclick="exponent()">x<sup>y</sup></button>
+                <button onclick="sine()">sin<sup style="display: none;" id="raise">-1</sup></button>
+                <button onclick="cos()">cos<sup style="display: none;" id="raisecos">-1</sup></button>
+                <button onclick="tan()">tan<sup style="display: none;" id="raisetan">-1</sup></button>
+            </div>
+
+            <div>
+                <button onclick="squareRoot()"><p id="sqrt">&Sqrt;</p><p id="recip" style="display: none;">1/x</p></button>
+                <button onclick="tenRaisePower()"><p id="tenpow">10<sup>x</sup></p><p id="epow" style="display: none;">e<sup>x</sup></p></button>
+                <button onclick="log()"><p id="log">log</p><p id="lin" style="display: none;">In</p></button>
+                <button onclick="">Exp</button>
+                <button onclick="remainder()">Mod</button>
+            </div>
+
+            <div>
+                <button onclick="changeToArc()" id="bot">&UpArrow;</button>
+                <button onclick="clearResult()">CE</button>
+                <button onclick="clearAllDisplay()">C</button>
+                <button onclick="delOne()">Del</button>
+                <button onclick="divisionOperation()" class="operations" >&divide;</button>
+            </div>
+
+            <div>
+                <button onclick="pie()">&pi;</button>
+                <button onclick="getNum(7)" class="like-white"><b>7</b></button>
+                <button onclick="getNum(8)" class="like-white"><b>8</b></button>
+                <button onclick="getNum(9)" class="like-white"><b>9</b></button>
+                <button onclick="multiplicationOperation()" class="operations">&times;</button>
+            </div>
+
+            <div>
+                <button onclick="factorial()">n!</button>
+                <button onclick="getNum(4)" class="like-white"><b>4</b></button>
+                <button onclick="getNum(5)" class="like-white"><b>5</b></button>
+                <button onclick="getNum(6)" class="like-white"><b>6</b></button>
+                <button onclick="subtractOperation()" class="operations">&minus;</button>
+            </div>
+
+            <div>
+                <button>&PlusMinus;</button>
+                <button onclick="getNum(1)" class="like-white"><b>1</b></button>
+                <button onclick="getNum(2)" class="like-white"><b>2</b></button>
+                <button onclick="getNum(3)" class="like-white"><b>3</b></button>
+                <button onclick="plusOperation()" class="operations">&plus;</button>
+            </div>
+
+            <div>
+                <button>(</button>
+                <button>)</button>
+                <button class="like-white" onclick="getNum(0)"> <b>0</b></button>
+                <button onclick="decimal()"><b>.</b></button>
+                <button onclick="evaluae()" class="operations">&equals;</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+<script>
+
+document.querySelector(".result").innerHTML= 0;
+var insideTyped;
+var first,second; 
+function getNum(num) {
+    insideTyped = document.querySelector(".typed").innerHTML;
+    // console.log(insideTyped);
+    if (insideTyped.length < 33) {
+        if (insideTyped== "0" && num == "0") {
+        document.querySelector(".typed").innerHTML = 0
+        } else if (num > "0" && insideTyped == "") {
+            document.querySelector(".typed").innerHTML += num;
+            console.log("shdj");
+        } else if (num > 0 && num != 0) {
+            document.querySelector(".typed").innerHTML += num;
+        } else if (num == 0 && insideTyped != 0) {
+            document.querySelector(".typed").innerHTML += num;
+        }else if (num == 0 && insideTyped == "") {
+            document.querySelector(".typed").innerHTML = 0
+        }
+    } else {
+        return;
+    }
+
+}
+
+
+function decimal() {
+    var sjk = document.querySelector(".typed").innerHTML;
+    console.log(sjk);
+    if (sjk == "") {
+        document.querySelector(".typed").innerHTML += "0.";
+    } else if (sjk > 0) {
+        document.querySelector(".typed").innerHTML += "."
+    }
+}
+
+
+function plusOperation() {
+    var one = document.querySelector(".typed").innerHTML;
+    
+    if (one == "") {
+        document.querySelector(".typed").innerHTML += "0 + "
+    }
+    
+    
+}
+
+function evaluae() {
+    var wha = document.querySelector(".typed").innerHTML
+    if (wha.includes("+")) {
+        
+    }
+}
+</script>
